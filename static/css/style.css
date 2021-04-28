@@ -1,0 +1,96 @@
+	body {
+	margin: 0%;
+	background-color: white;
+}
+
+p {
+	color: red;
+}
+
+ul {
+	list-style-type: none;
+	display: flex;
+	margin: 0px;
+	float: left;
+}
+
+.right-nav-opt {
+	float: right;
+	margin-right: 15px;
+}
+
+nav {
+	background-color: #d13b15;
+	margin: 0px;
+	overflow: hidden;
+	margin-bottom: 30px;
+}
+
+nav li {
+	display: inline-block;
+	text-align: center;
+	margin: 0px;
+}
+
+li a {
+	color: #e8e8e8;
+	float: left;
+	text-align: center;
+	text-decoration: none;
+	font-size: 17px;
+	height: 70px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+li a:hover {
+	background-color: #a32708;
+}
+
+.container {
+	width: 50%;
+	height: 600px;
+	margin: 0px;
+	float: left;
+	height: 500px;
+	text-align: center;
+}
+
+.woman-div {
+	float: left;
+	width: 50%;
+	height: 700px;
+	background-image: url('woman-front.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	border-radius: 50px;
+}
+
+h1.front {
+	font-size: 6vw;
+	color: #242323;
+	margin: 0px;
+}
+
+@media screen and (max-width: 960px) {
+	.container,
+	.woman-div,.footer-container {
+		width: 100%;
+		/* The width is 100%, when the viewport is 800px or smaller */
+	}
+
+.ft-container{
+	float: left;
+	background-color: tomato;
+	width: 100%
+	height: 400px;
+}
+
+div.a:link{
+	color: tomato;
+	padding: 15px;
+	background-color: wheat;
+}

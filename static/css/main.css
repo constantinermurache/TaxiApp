@@ -1,0 +1,187 @@
+body {
+
+    margin: 0%;
+}
+
+.container {
+    margin: 0px;
+    padding:15px;
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: ;
+  }
+  .google-icons{
+    font-size:auto;
+    color:white;
+  }
+  
+  /* Style the top navigation bar */
+  .topnav {
+    font: 95% Arial, Helvetica, sans-serif;
+    overflow: hidden;
+   /* background-color: rgb(14, 14, 14);*/
+  }
+  
+  /* Style the topnav links */
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  .topnav a:hover {
+    background-color: #43D1AF;
+    color: #f2f2f2
+  }
+  
+  .topnav a:active {
+      background-color: #43D1AF;
+  }
+  .signup-div{
+    float:right;
+    padding-right: 30px;
+    vertical-align:middle;
+  }
+  .material-icons{
+    vertical-align: middle;
+    margin-right: 15px;
+  }
+
+ p.form-text{
+    text-align: center;
+    color: #555;
+    margin:5px;
+  }
+
+  .form-style-6{
+    font: 95% Arial, Helvetica, sans-serif;
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 16px;
+    background: #F7F7F7;
+    text-align: center;
+  }
+  .form-style-6 h1{
+    background: #43D1AF;
+    padding: 20px 0;
+    font-size: 140%;
+    font-weight: 300;
+    text-align: center;
+    color: #fff;
+    margin: -16px -16px 16px -16px;
+  }
+  .form-style-6 input[type="text"],
+  .form-style-6 input[type="password"],
+  .form-style-6 input[type="date"],
+  .form-style-6 input[type="datetime"],
+  .form-style-6 input[type="email"],
+  .form-style-6 input[type="number"],
+  .form-style-6 input[type="search"],
+  .form-style-6 input[type="time"],
+  .form-style-6 input[type="url"],
+  .form-style-6 textarea,
+  .form-style-6 select 
+  {
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    background: #fff;
+    margin-bottom: 4%;
+    border: 1px solid #ccc;
+    padding: 3%;
+    color: #555;
+    font: 95% Arial, Helvetica, sans-serif;
+  }
+  .form-style-6 input[type="text"]:focus,
+  .form-style-6 input[type="password"]:focus,
+  .form-style-6 input[type="date"]:focus,
+  .form-style-6 input[type="datetime"]:focus,
+  .form-style-6 input[type="email"]:focus,
+  .form-style-6 input[type="number"]:focus,
+  .form-style-6 input[type="search"]:focus,
+  .form-style-6 input[type="time"]:focus,
+  .form-style-6 input[type="url"]:focus,
+  .form-style-6 textarea:focus,
+  .form-style-6 select:focus
+  {
+    box-shadow: 0 0 5px #43D1AF;
+    padding: 3%;
+    border: 1px solid #43D1AF;
+  }
+  
+  .form-style-6 input[type="submit"],
+  .form-style-6 input[type="button"]{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    padding: 3%;
+    background: #43D1AF;
+    border-bottom: 2px solid #30C29E;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;	
+    color: #fff;
+  }
+  .form-style-6 input[type="submit"]:hover,
+  .form-style-6 input[type="button"]:hover{
+    background: #2EBC99;
+  }
+
+  ul.errorlist{
+    margin: 0;
+    padding: 0;
+  }
+  .errorlist li {
+    border: 1px solid red;
+    color: red;
+    background: rgba(255, 0, 0, 0.15);
+    list-style-position: inside;
+    display: block;
+    font-size: 1.2em;
+    margin: 0 0 3px;
+    padding: 4px 5px;
+    text-align: center;
+    border-radius: 3px;
+  }
+
+  input, textarea{
+    width: 100%;
+    padding: 5px!important;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(169, 169, 169)
+  }
+
+  input{
+    height: 40px;
+
+    text-align: center;
+  }
+  .success{
+    background-color: rgba(0, 128, 0, 0.15)
+    padding: 10px;
+    text-align: center;
+    color: green;
+    border: 1px solid green;
+    border-radius: 3px;
+  }
+
