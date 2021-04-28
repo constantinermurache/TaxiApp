@@ -1,0 +1,320 @@
+	body,html {
+	margin: 0;
+	background-color: rgb(182, 158, 55);
+	height: 100%;
+	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.bg {
+	/* The image used */
+	background-image: url("images/city-pic.png");
+	opacity:1;
+
+  
+	/* Full height */
+	height: 100%;
+  
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	padding-top: 20px;
+  }
+
+.child{
+	padding:25px;
+	background-color:white;
+	width: 80%;
+	margin:auto;
+	opacity: 0.92;
+}
+
+ul {
+	list-style-type: none;
+	display: flex;
+	margin: 0px;
+}
+.left-nav-opt{
+	float: left;
+}
+
+.right-nav-opt {
+	float: right;
+}
+
+nav {
+	background-color: #d13b15;
+	margin: 0px;
+	overflow: hidden;
+
+}
+
+nav li {
+	display: inline-block;
+	text-align: center;
+	margin: 0px;
+}
+
+li a {
+	color: #e8e8e8;
+	float: left;
+	text-align: center;
+	text-decoration: none;
+	font-size: 17px;
+	height: 50px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+li a:hover {
+	background-color: #a32708;
+}
+
+
+h2.booking{
+	text-align: center;
+}
+h2{
+	color: #333333;
+}
+
+
+
+h1.front {
+	font-size: 6vw;
+	color: #242323;
+	margin: 0px;
+}
+div.a:link{
+	color: tomato;
+	padding: 15px;
+	background-color: wheat;
+}
+
+.login-form{
+	margin: auto;
+	text-align: center;
+	width: 45%;
+}
+.login-form-text{
+	color: #302f2e;
+	font-size: 15px;
+margin: 0px;
+}
+.login-form div{
+	float: left;
+	width: 100%;
+	margin:0px;
+	display: flex;
+	width: 100%;
+	margin-bottom: 15px;
+}
+textarea:focus, input:focus{
+    outline: none;
+}
+input[type=text],
+input[type=password],
+input[type=email]{
+	background-color: white;
+	padding: 15px;
+	border:none;
+    border: 1px solid  #f57242;
+	outline: none;
+	width: 100%;
+	box-sizing: border-box;
+	margin-bottom: 5px;
+}
+input[type=text]:hover,
+input[type=password]:hover,
+input[type=email]:hover{
+	border: 2px solid #b82116;
+}
+
+input[type=text]:focus-within,input[type=password]:focus-within{
+	background-color: white;
+}
+/* Change the white to any color ;) */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+input[type=submit]{
+	background-color: green;
+	color: #f0edeb;
+	font-size: medium;
+width: 100%;
+height: 43px;
+	border: 0px;
+	margin-top: 10px;
+}
+input[type=submit]:hover{
+	background-color:#b82116;
+}
+
+.reg-form{
+	text-align: center;
+}
+.input-text{
+
+}
+.booking-table{
+	border:0px;
+	padding: 0px;
+	border-collapse: collapse;
+	margin-left:auto; 
+	margin-right:auto;
+}
+.booking-table th{
+	background-color: #363535;
+	color: #d9d9d9;
+	padding: 15px;
+
+}
+.booking-table tr{
+	background-color: #e3e3e3;
+}
+.booking-table td{
+	padding:15px;
+}
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+a.reg-link{
+
+	background-color: #333436;
+	text-decoration: none;
+	margin-right: 40px;
+	font-size: 40px;
+	color: white;
+	border-radius: 15px;
+	padding: 20px;
+	transition: padding 2s;
+	
+
+}
+a:visited.reg-link{
+	color: white;
+}
+a:hover.reg-link{
+	background-color: #869c19;
+	color: white;
+	padding:40px;
+}
+
+.reg-type{
+	margin-top: 40px;
+	height: 200px;
+	text-align: center;
+}
+
+.edit-wrapper{
+	margin:auto;
+	text-align: center;
+	width: 500px;
+}
+
+/* Set a style for all buttons */
+button {
+	background-color: #5cc442;
+	color: white;
+	border: none;
+	cursor: pointer;
+	opacity: 0.9;
+	height: 43px;
+  }
+  
+  button:hover {
+	opacity:1;
+  }
+  
+  /* Float cancel and delete buttons and add an equal width */
+  .cancelbtn, .deletebtn {
+	float: left;
+	width: 100%;
+  }
+  
+  /* Add a color to the cancel button */
+  .cancelbtn {
+	background-color: #ccc;
+	color: black;
+  }
+  
+  /* Add a color to the delete button */
+  .deletebtn {
+	background-color: #f44336;
+  }
+  
+  /* Add padding and center-align text to the container */
+  .container {
+	padding: 16px;
+	text-align: center;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: #474e5d;
+	padding-top: 50px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+	background-color: #fefefe;
+	margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+	border: 1px solid #888;
+	width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* Style the horizontal ruler */
+  hr {
+	border: 1px solid #f1f1f1;
+	margin-bottom: 25px;
+  }
+   
+  /* The Modal Close Button (x) */
+  .close {
+	position: absolute;
+	right: 35px;
+	top: 15px;
+	font-size: 40px;
+	font-weight: bold;
+	color: #f1f1f1;
+  }
+  
+  .close:hover,
+  .close:focus {
+	color: #f44336;
+	cursor: pointer;
+  }
+  
+  /* Clear floats */
+  .clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+  }
+  
+  /* Change styles for cancel button and delete button on extra small screens */
+  @media screen and (max-width: 300px) {
+	.cancelbtn, .deletebtn {
+	   width: 100%;
+	}
+  }
+
+  .menu-icons{
+	font-size:auto;
+	color:white;
+	margin-right: 10px;
+  }
