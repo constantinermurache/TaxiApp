@@ -1,0 +1,112 @@
+{% extends 'accounts/main.html' %}
+{% block content %}
+
+
+<!--			Available trips         -->
+			<h2 class = "booking">Available Trips</h2>
+
+			<table class="booking-table">
+				<tr>
+					<th>PickUp Address</th>
+					<th>Destination</th>
+					<th>Date</th>
+					<th>Time</th>
+					<th>Status</th>
+					<th></th>
+
+				</tr>
+
+				{% for booking in bookings_pending %}
+
+				<tr>
+					<td>{{booking.start_address}}</td>
+					<td>{{booking.destination_address}}</td>
+					<td>{{booking.date}}</td>
+					<td>{{booking.time}}</td>
+					<td><b><i class="material-icons" style="font-size: auto; vertical-align: middle; margin-right: 10px;">	history</i>{{booking.status}}...</b></td>
+					<td><a href="{% url 'acceptBookingDriver' booking.id %}">Accept Trip</a></td>
+
+
+
+				</tr>
+
+				{% endfor %}
+
+			</table>
+
+<!--			Accepted trips         -->
+
+			<h2 class="booking">Accepted Trips</h2>
+
+			<table class="booking-table">
+				<tr>
+					<th>PickUp Address</th>
+					<th>Destination</th>
+					<th>Date</th>
+					<th>Time</th>
+					<th>Status</th>
+					<th>Paid</th>
+					<th></th>
+
+				</tr>
+
+				{% for booking in bookings_in_progress %}
+
+				<tr>
+					<td>{{booking.start_address}}</td>
+					<td>{{booking.destination_address}}</td>
+					<td>{{booking.date}}</td>
+					<td>{{booking.time}}</td>
+					<td>{{booking.status}}</td>
+					{% if booking.paid == True %}
+						<td><i class="material-icons" style="font-size:auto;">check_circle</i></td>
+					{% else %}
+						<td><i class="material-icons" style="font-size:auto;">radio_button_unchecked</i></td>
+					{% endif %}
+					<td><a href="{% url 'cancelBookingDriver' booking.id %}">Cancel Trip</a></td>
+
+
+
+				</tr>
+
+				{% endfor %}
+
+			</table>
+
+
+		<!--			Finished trips         -->
+		<div class="card card-body">
+			<h2 class="booking">Finished Trips</h2>
+
+			<table class="booking-table">
+				<tr>
+					<th>PickUp Address</th>
+					<th>Destination</th>
+					<th>Date</th>
+					<th>Time</th>
+					<th>Status</th>
+					<th>Paid</th>
+
+				</tr>
+
+				{% for booking in bookings_finished %}
+
+				<tr>
+					<td>{{booking.start_address}}</td>
+					<td>{{booking.destination_address}}</td>
+					<td>{{booking.date}}</td>
+					<td>{{booking.time}}</td>
+					<td>{{booking.status}}</td>
+					{% if booking.paid == True %}
+						<td><i class="material-icons" style="font-size:auto;color: green;">check_circle</i></td>
+
+					{% endif %}
+
+				</tr>
+
+				{% endfor %}
+
+			</table>
+
+
+{% endblock content %}

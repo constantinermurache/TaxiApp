@@ -1,0 +1,80 @@
+{% load static %}
+{% load auth_extras %}
+<!DOCTYPE html>
+
+<head>
+    <title>Website</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+
+        // Get the modal
+        var modal2 = document.getElementById('id02');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal2) {
+            modal2.style.display = "none";
+          }
+        }
+        </script>
+</head>
+
+<body>
+    <nav>
+        <ul class="left-nav-opt">
+            <li><a href="/"><i class="material-icons" style="font-size:auto;color:white;margin-right: 10px;">view_module</i>HOME</a></li>
+        </ul>
+        <ul class="right-nav-opt">
+
+            {% if user.is_authenticated %}
+                {% if request.user|has_group:"CUSTOMER" %}
+                    <li><a href="{% url 'customerDetails' %}"><i class="material-icons menu-icons">person_pin</i>Customer Profile</a></li>
+                {% elif request.user|has_group:"DRIVER" %}
+                <li><a href="{% url 'driverTrips' %}"><i class="material-icons menu-icons">near_me</i>My Trips</a></li>
+                    <li><a href="{% url 'driverDetails' %}"><i class="material-icons menu-icons">	person_pin</i>Driver Profile</a></li>
+                {% endif %}
+
+                {% if request.user|has_group:"CUSTOMER" %}
+                <li><a href="{% url 'tripBooking' %}"><i class="material-icons menu-icons">add_location</i>Get a ride</a></li>
+                    <li><a href="{% url 'userBookingsList' %}"><i class="material-icons menu-icons">directions_car</i>My Bookings</a></li>
+                {% endif %}
+            {% endif%}
+            {% if user.is_authenticated %}
+                <li><a href="{% url 'logout' %}"><i class="material-icons menu-icons">	phonelink_erase</i>LOGOUT {{ user.get_username }}</a></li>
+            {% else %}
+                <li><a href="{% url 'loginPage' %}"><i class="material-icons" style="font-size:auto;color:white;margin-right: 5px;">vpn_key</i>LOGIN</a></li>
+                <li><a href="{% url 'registerType' %}"><i class="material-icons" style="font-size:auto;color:white;margin-right: 5px;">person_add</i>SIGN UP</a></li>
+            </ul>
+            {% endif%}
+    </nav>
+
+    <div class="bg">
+        <div class="child">
+            {% block content %}
+             <div class="container">
+                <h1 class="front">Need a ride ?</h1>
+                <div class="front-links"><a href="#">Take a ride</a></div>
+
+            {% endblock content %}
+            <div style="text-align: center; margin-top: 30px;"> <i class="material-icons" style="font-size:60px; opacity: 0.2;">&#xe52d;</i></div>
+
+        </div>
+    </div>
+
+
+
+
+
+</body>
+</html>

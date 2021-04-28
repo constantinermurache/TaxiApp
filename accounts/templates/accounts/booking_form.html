@@ -1,0 +1,16 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+{%block content%}
+<div class="edit-wrapper">
+    <h2>Make a booking</h2>
+<form method="POST">
+    {% csrf_token %}
+    <input type="text" name="start_address" maxlength="200" required="" id="id_start_address" placeholder="Pickup Adress...">
+    <input type="text" name="destination_address" maxlength="200" required="" id="id_destination_address" placeholder="Destination Adress..."><br>
+    <input type="date" name="date" required="" id="id_date">
+    <input type="time" name="time" required="" id="id_time"><br>
+     <input type="submit" name="Book">
+
+</form>
+</div>
+{% endblock content %}

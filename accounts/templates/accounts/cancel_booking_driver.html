@@ -1,0 +1,13 @@
+{% extends 'accounts/main.html' %}
+{% block content %}
+
+<p>Are you sure you want to cancel the booking?</p>
+
+<form action="{% url 'cancelBookingDriver' booking.id %}" method="POST">
+    {% csrf_token %}
+    <a href="{% url 'driverTrips' %}">No</a>
+
+    <input type="submit" value="Yes, cancel the booking">
+</form>
+
+{% endblock content %}

@@ -1,0 +1,74 @@
+{% extends 'accounts/main.html' %}
+{% block content %}
+<a class="btn btn-primary btn-sm btn-block" href="{% url 'tripBooking' %}">Book a Trip</a>
+	<table class="booking-table">
+		<tr>
+		<th>Pickup Adress</th>
+		<th>Destination Adress</th>
+		<th>Date</th>
+		<th>Time</th>
+		<th>Status</th>
+		<th></th>
+		<th></th>
+		</tr>
+				{% for booking in bookings %}
+
+				<tr>
+					<td>{{booking.start_address}}</td>
+					<td>{{booking.destination_address}}</td>
+					<td>{{booking.date}}</td>
+					<td>{{booking.time}}</td>
+					<td><b><i class="material-icons" style="font-size: auto; vertical-align: middle; margin-right: 10px;">	history</i>{{booking.status}}...</b></td>
+
+					<td>
+						<button onclick="document.getElementById('id02').style.display='block'" style="background-color: yellowgreen;">Update</button>
+
+						<div id="id02" class="modal">
+							<span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">×</span>
+
+								<form  class="modal-content" action="{% url 'updateBooking' booking.id %}" method="POST">
+									{% csrf_token %}
+							  			<div class="container">
+									<h1>Update a booking.</h1>
+
+									<input type="text" name="start_address" maxlength="200" required="" id="id_start_address" placeholder="Pickup Adress...">
+									<input type="text" name="destination_address" maxlength="200" required="" id="id_destination_address" placeholder="Destination Adress..."><br>
+									<input type="date" name="date" required="" id="id_date">
+									<input type="time" name="time" required="" id="id_time"><br>
+									<input type="submit" name="edit" value="Update">
+
+										</div>
+								</form>
+						  </div>
+					</td>
+
+					<td>
+						<button onclick="document.getElementById('id01').style.display='block'" style="background-color: tomato;">Delete</button>
+
+						<div id="id01" class="modal">
+							<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+
+								<form  class="modal-content" action="{% url 'deleteBooking' booking.id %}" method="POST">
+									{% csrf_token %}
+							  <div class="container">
+								<h1>Delete booking.</h1>
+								<p>Are you sure you want to delete your trip ?</p>
+
+								<div class="clearfix">
+								  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+									<input type="submit" value="Delete" onclick="document.getElementById('id01').style.display='none'">
+								  </form>
+
+								  <!-- <button type="button" onclick="document.getElementById('id01').style.display='none'" class="deletebtn">Delete</button> -->
+								</div>
+							  </div>
+							</form>
+						  </div>
+					</td>
+				  </tr>
+
+				{% endfor %}
+
+	</table>
+
+{% endblock content %}

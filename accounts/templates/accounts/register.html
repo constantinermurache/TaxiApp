@@ -1,0 +1,26 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+
+{% block content %}
+
+<h3>Register</h3>
+
+<div class="reg-form">
+
+<form method="POST" action="">
+    {% csrf_token %}
+    <input type="text" name="username" maxlength="150" autofocus="" required="" id="id_username" placeholder="User Name...">
+    <input type="text" name="first_name" maxlength="150" id="id_first_name" placeholder="First Name...">
+    <input type="text" name="last_name" maxlength="150" id="id_last_name" placeholder="Last Name...">
+    <input type="email" name="email" maxlength="254" id="id_email" placeholder="E-Mail...">
+    <input type="password" name="password1" autocomplete="off" required="" id="id_password1" placeholder="Passoword...">
+    <input type="password" name="password2" autocomplete="off" required="" id="id_password2" placeholder="Retype Password...">
+    <input type="submit" name="Create account" value="REGISTER">
+    <div class="mt-4">
+        <div class="d-flex justify-content-center links">
+            Already have an account? <a href="{% url 'loginPage' %}" class="ml-2">Sign In</a>
+        </div>
+    </div>
+</form>
+</div>
+{% endblock content %}

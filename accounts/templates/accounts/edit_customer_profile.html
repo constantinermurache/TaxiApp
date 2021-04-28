@@ -1,0 +1,32 @@
+{% extends 'accounts/main.html' %}
+{% block title %}Customer Profile{% endblock %}
+{% block content %}
+
+
+<div class="edit-wrapper">
+    <h2 style="color: #303030; text-align: center;">Edit Personal Information</h2>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+
+        {{form.phone}}
+
+        {{form.address}}
+
+        {{form.town}}
+
+        {{form.county}}
+
+        {{form.postcode}}
+
+        {{form.payment_method}}
+
+        {{form.reg_No}}
+
+
+<input type="submit" name="Update" value="Update">
+    </form>
+</div>
+
+
+{% endblock content %}

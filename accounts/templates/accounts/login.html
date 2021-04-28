@@ -1,0 +1,38 @@
+{% extends 'accounts/main.html' %}
+{% block title %}Customer Registration{% endblock title %}
+
+{% block content %}
+
+<div class="login-form">
+
+    <form method="POST" autocomplete="off">
+        {% csrf_token %}
+        <div>
+            <i class="material-icons" style="font-size: auto;color:orange; float: left;">account_box</i>
+                <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="off"
+                    maxlength="150" required="" id="id_username" placeholder="User Name...">
+        </div>
+
+    <div>
+        <i class="material-icons" style="color:orange; float: left;">lock</i><br>
+            <input type="password" name="password" autocomplete="off" required="" id="id_password" placeholder="Password...">
+        </div>
+
+    <input type="submit" value="Login">
+
+
+    </form>
+
+
+    {% for message in messages %}
+        <p id="messages">{{message}}</p>
+    {% endfor %}
+    </div>
+    <div class="mt-4">
+        <div class="d-flex justify-content-center links">
+            Don't have an account? <a href="{% url 'registerType' %}" class="ml-2">Sign Up</a>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

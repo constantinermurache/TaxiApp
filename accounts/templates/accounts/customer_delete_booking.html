@@ -1,0 +1,13 @@
+{% extends 'accounts/main.html' %}
+{% block content %}
+
+<p>Are you sure you want to delete the booking?</p>
+
+<form action="{% url 'deleteBooking' booking.id%}" method="POST">
+    {% csrf_token %}
+    <a href="{% url 'userBookingsList' %}">No</a>
+
+    <input type="submit" value="Yes, cancel the booking">
+</form>
+
+{% endblock content %}
